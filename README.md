@@ -2,8 +2,13 @@ NOTES for further README development:
 
 - I needed to update pip so that it will be able to find TensorFlow 15 (requested in the requirements.txt file). I used `pip3 install --upgrade pip`, as suggested [here](https://stackoverflow.com/questions/38613316/how-to-upgrade-pip3).
 - Edited files:
-  - /src/waypoint_updater/waypoint_updater.py
-  - /src/twist_controller/dbw_node.py
+  - /src/waypoint_updater/waypoint_updater.py to get base waypoints and send the final ones from 200 in 200
+  - /src/twist_controller/dbw_node.py to get the controller's output and send it to the car
+  - /src/twist_controller/twist_controller.py 
+    - NOTE: We can get steering commands from the yaw controller
+- The system will switch to manual control if the control messages are provided at 10 Hz or lower. The expected rate is 50 Hz.
+- Carla has automatic transmision, so it will go forward unless some breaking is applied. Over 700 Nm are needed to keep it in place.
+  - Vehicle mass * wheels radio * desired acceleration = necessary torque
 
 
 ---
