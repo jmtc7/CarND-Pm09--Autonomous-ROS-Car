@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -62,7 +62,7 @@ ENV_VAR_SUBFOLDERS = {
     'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': ['lib', os.path.join('lib', 'x86_64-linux-gnu')],
     'PATH': PATH_TO_ADD_SUFFIX,
     'PKG_CONFIG_PATH': [os.path.join('lib', 'pkgconfig'), os.path.join('lib', 'x86_64-linux-gnu', 'pkgconfig')],
-    'PYTHONPATH': 'lib/python2.7/dist-packages',
+    'PYTHONPATH': 'lib/python3/dist-packages',
 }
 
 
@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/home/jmtc7/Learning/self-driving-car-nanodegree/part2-localization-path-planning-control-and-system-integration/module09-carla/lesson19-writing-ros-nodes/catkin_ws/devel;/home/jmtc7/akka/catkin_ws/devel;/home/jmtc7/catkin_ws/devel;/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel;/home/jmtc7/Learning/self-driving-car-nanodegree/part2-localization-path-planning-control-and-system-integration/module09-carla/lesson19-writing-ros-nodes/catkin_ws/devel;/home/jmtc7/akka/catkin_ws/devel;/home/jmtc7/catkin_ws/devel;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

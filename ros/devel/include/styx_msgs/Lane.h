@@ -95,16 +95,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::styx_msgs::Lane_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::styx_msgs::Lane_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::styx_msgs::Lane_<ContainerAllocator> >
   : TrueType
   { };
@@ -112,6 +102,16 @@ struct IsMessage< ::styx_msgs::Lane_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::styx_msgs::Lane_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::styx_msgs::Lane_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::styx_msgs::Lane_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build
 include styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_TrafficLight.dir/progress.make
 
 styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_TrafficLight:
-	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py styx_msgs /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/PoseStamped:std_msgs/Header
+	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py styx_msgs /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg std_msgs/Header:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/PoseStamped
 
 _styx_msgs_generate_messages_check_deps_TrafficLight: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_TrafficLight
 _styx_msgs_generate_messages_check_deps_TrafficLight: styx_msgs/CMakeFiles/_styx_msgs_generate_messages_check_deps_TrafficLight.dir/build.make

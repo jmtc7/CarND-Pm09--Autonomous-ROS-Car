@@ -12,8 +12,8 @@ try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/home/jmtc7/Learning/self-driving-car-nanodegree/part2-localization-path-planning-control-and-system-integration/module09-carla/lesson19-writing-ros-nodes/catkin_ws/devel;/home/jmtc7/akka/catkin_ws/devel;/home/jmtc7/catkin_ws/devel;/opt/ros/melodic'.split(';'):
-        python_path = os.path.join(workspace, 'lib/python2.7/dist-packages')
+    for workspace in '/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel;/home/jmtc7/Learning/self-driving-car-nanodegree/part2-localization-path-planning-control-and-system-integration/module09-carla/lesson19-writing-ros-nodes/catkin_ws/devel;/home/jmtc7/akka/catkin_ws/devel;/home/jmtc7/catkin_ws/devel;/opt/ros/melodic'.split(';'):
+        python_path = os.path.join(workspace, 'lib/python3/dist-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
             break

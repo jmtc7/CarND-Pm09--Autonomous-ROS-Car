@@ -53,75 +53,75 @@ CMAKE_BINARY_DIR = /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build
 # Include the progress variables for this target.
 include styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/progress.make
 
-styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py
-styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py
-styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py
-styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py
-styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py
+styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py
+styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py
+styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py
+styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py
+styx_msgs/CMakeFiles/styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py
 
 
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG styx_msgs/TrafficLight"
-	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg
+	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg
 
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Lane.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Waypoint.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/TwistStamped.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG styx_msgs/Lane"
-	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Lane.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLightArray.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG styx_msgs/TrafficLightArray"
+	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLightArray.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg
 
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLightArray.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLight.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG styx_msgs/TrafficLightArray"
-	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/TrafficLightArray.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Waypoint.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/TwistStamped.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG styx_msgs/Waypoint"
+	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Waypoint.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg
 
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Waypoint.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/TwistStamped.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG styx_msgs/Waypoint"
-	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Waypoint.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Lane.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/TwistStamped.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Waypoint.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/PoseStamped.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG styx_msgs/Lane"
+	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg/Lane.msg -Istyx_msgs:/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p styx_msgs -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg
 
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py
-/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py
+/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for styx_msgs"
-	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg --initpy
+	cd /home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/styx_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg --initpy
 
 styx_msgs_generate_messages_py: styx_msgs/CMakeFiles/styx_msgs_generate_messages_py
-styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLight.py
-styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Lane.py
-styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_TrafficLightArray.py
-styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/_Waypoint.py
-styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python2.7/dist-packages/styx_msgs/msg/__init__.py
+styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLight.py
+styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_TrafficLightArray.py
+styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Waypoint.py
+styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/_Lane.py
+styx_msgs_generate_messages_py: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages/styx_msgs/msg/__init__.py
 styx_msgs_generate_messages_py: styx_msgs/CMakeFiles/styx_msgs_generate_messages_py.dir/build.make
 
 .PHONY : styx_msgs_generate_messages_py

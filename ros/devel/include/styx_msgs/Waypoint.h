@@ -95,16 +95,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::styx_msgs::Waypoint_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::styx_msgs::Waypoint_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::styx_msgs::Waypoint_<ContainerAllocator> >
   : TrueType
   { };
@@ -112,6 +102,16 @@ struct IsMessage< ::styx_msgs::Waypoint_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::styx_msgs::Waypoint_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::styx_msgs::Waypoint_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::styx_msgs::Waypoint_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

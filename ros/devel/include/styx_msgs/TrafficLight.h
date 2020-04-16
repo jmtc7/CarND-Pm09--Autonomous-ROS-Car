@@ -129,16 +129,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::styx_msgs::TrafficLight_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::styx_msgs::TrafficLight_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::styx_msgs::TrafficLight_<ContainerAllocator> >
   : TrueType
   { };
@@ -146,6 +136,16 @@ struct IsMessage< ::styx_msgs::TrafficLight_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::styx_msgs::TrafficLight_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::styx_msgs::TrafficLight_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::styx_msgs::TrafficLight_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
