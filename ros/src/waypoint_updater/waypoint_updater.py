@@ -70,7 +70,7 @@ class WaypointUpdater(object):
         y = self.pose.pose.position.y
 
         # Search (only) the closest waypoint (1st 1) and get its index (2nd 1)
-        closest_idx = self.waypoints_tree.query(x, y, 1)[1]
+        closest_idx = self.waypoints_tree.query([x, y], 1)[1]
 
         # Check if the closest WP is ahead of the vehicle
         ## Get coordinates of current closest and last one
@@ -96,7 +96,7 @@ class WaypointUpdater(object):
         # Use the LOOKAHEAD_WPS WPs to create the lane message
         ## NOTE: Python will provide less than LOOKAHEAD_WPS points if it is required an index out of the list
         lane.header = self.base_waypoints.header
-        lane.waypoints = self.base_waypoints[closest_idx:(LOOKAHEAD_WPS+closest_idx)]
+        lane.waypoints = self.base_waypoints.waypoints[closest_idx:(LOOKAHEAD_WPS+closest_idx)]
 
         # Publish
         self.final_waypoints_pub.publish(lane)
