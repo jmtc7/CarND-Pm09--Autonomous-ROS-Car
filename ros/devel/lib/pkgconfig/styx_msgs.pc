@@ -1,8 +1,8 @@
-prefix=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel
+prefix=/home/jmtc7/code/ros/devel
 
 Name: styx_msgs
 Description: Description of styx_msgs
 Version: 0.0.0
-Cflags: -I/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/include
+Cflags: -I/home/jmtc7/code/ros/devel/include
 Libs: -L${prefix}/lib 
 Requires: 

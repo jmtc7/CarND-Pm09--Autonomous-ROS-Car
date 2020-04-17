@@ -1,8 +1,8 @@
-# Install script for directory: /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_updater
+# Install script for directory: /home/jmtc7/code/ros/src/waypoint_updater
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jmtc7/code/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -32,23 +32,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jmtc7/code/ros/build/waypoint_updater/catkin_generated/installspace/waypoint_updater.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/waypoint_updater/catkin_generated/installspace/waypoint_updater.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_updater/cmake" TYPE FILE FILES
-    "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/waypoint_updater/catkin_generated/installspace/waypoint_updaterConfig.cmake"
-    "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build/waypoint_updater/catkin_generated/installspace/waypoint_updaterConfig-version.cmake"
+    "/home/jmtc7/code/ros/build/waypoint_updater/catkin_generated/installspace/waypoint_updaterConfig.cmake"
+    "/home/jmtc7/code/ros/build/waypoint_updater/catkin_generated/installspace/waypoint_updaterConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_updater" TYPE FILE FILES "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_updater/package.xml")
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_updater" TYPE FILE FILES "/home/jmtc7/code/ros/src/waypoint_updater/package.xml")
 endif()
 

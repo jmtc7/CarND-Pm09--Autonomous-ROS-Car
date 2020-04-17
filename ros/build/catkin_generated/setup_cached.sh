@@ -7,6 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export PATH="/opt/ros/melodic/bin:/home/jmtc7/.local/bin:/home/jmtc7/anaconda3/condabin:/home/jmtc7/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
-export PWD="/home/jmtc7/Learning/Autonomous-ROS-Car/ros/build"
-export PYTHONPATH="/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib/python3/dist-packages:/home/jmtc7/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
+export CMAKE_PREFIX_PATH="/home/jmtc7/code/ros/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/jmtc7/code/ros/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/jmtc7/code/ros/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD="/home/jmtc7/code/ros/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/jmtc7/code/ros/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/jmtc7/code/ros/src:$ROS_PACKAGE_PATH"

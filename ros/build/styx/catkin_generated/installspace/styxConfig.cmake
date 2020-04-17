@@ -67,14 +67,14 @@ set(styx_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(styx_SOURCE_PREFIX /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/styx)
-  set(styx_DEVEL_PREFIX /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel)
+  set(styx_SOURCE_PREFIX /home/jmtc7/code/ros/src/styx)
+  set(styx_DEVEL_PREFIX /home/jmtc7/code/ros/devel)
   set(styx_INSTALL_PREFIX "")
   set(styx_PREFIX ${styx_DEVEL_PREFIX})
 else()
   set(styx_SOURCE_PREFIX "")
   set(styx_DEVEL_PREFIX "")
-  set(styx_INSTALL_PREFIX /home/jmtc7/Learning/Autonomous-ROS-Car/ros/install)
+  set(styx_INSTALL_PREFIX /home/jmtc7/code/ros/install)
   set(styx_PREFIX ${styx_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jmtc7/Learning/Autonomous-ROS-Car/ros/install/lib;/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib;/home/jmtc7/Learning/self-driving-car-nanodegree/part2-localization-path-planning-control-and-system-integration/module09-carla/lesson19-writing-ros-nodes/catkin_ws/devel/lib;/home/jmtc7/akka/catkin_ws/devel/lib;/home/jmtc7/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/jmtc7/code/ros/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

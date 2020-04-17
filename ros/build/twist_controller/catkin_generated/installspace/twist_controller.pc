@@ -1,4 +1,4 @@
-prefix=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/install
+prefix=/home/jmtc7/code/ros/install
 
 Name: twist_controller
 Description: Description of twist_controller

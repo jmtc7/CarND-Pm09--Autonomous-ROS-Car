@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;std_msgs;tf;geometry_msgs;styx_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-llibwaypoint_follower".split(';') if "-llibwaypoint_follower" != "" else []
 PROJECT_NAME = "waypoint_follower"
-PROJECT_SPACE_DIR = "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/install"
+PROJECT_SPACE_DIR = "/home/jmtc7/code/ros/install"
 PROJECT_VERSION = "0.0.0"

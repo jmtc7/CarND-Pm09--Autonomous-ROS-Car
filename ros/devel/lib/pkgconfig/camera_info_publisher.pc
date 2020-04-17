@@ -1,4 +1,4 @@
-prefix=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel
+prefix=/home/jmtc7/code/ros/devel
 
 Name: camera_info_publisher
 Description: Description of camera_info_publisher

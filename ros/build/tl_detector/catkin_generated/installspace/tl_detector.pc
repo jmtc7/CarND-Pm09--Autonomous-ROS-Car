@@ -1,4 +1,4 @@
-prefix=/home/jmtc7/Learning/Autonomous-ROS-Car/ros/install
+prefix=/home/jmtc7/code/ros/install
 
 Name: tl_detector
 Description: Description of tl_detector

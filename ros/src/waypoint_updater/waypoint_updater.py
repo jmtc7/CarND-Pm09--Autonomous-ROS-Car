@@ -108,7 +108,6 @@ class WaypointUpdater(object):
     # DONE
     def waypoints_cb(self, waypoints):
         print("CREATING WPs TREE")
-        print(str(len(waypoints)) + " base waypoints detected")
         # Get base WPs
         self.base_waypoints = waypoints
 

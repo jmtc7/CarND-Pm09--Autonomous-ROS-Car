@@ -67,14 +67,14 @@ set(waypoint_follower_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(waypoint_follower_SOURCE_PREFIX /home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_follower)
-  set(waypoint_follower_DEVEL_PREFIX /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel)
+  set(waypoint_follower_SOURCE_PREFIX /home/jmtc7/code/ros/src/waypoint_follower)
+  set(waypoint_follower_DEVEL_PREFIX /home/jmtc7/code/ros/devel)
   set(waypoint_follower_INSTALL_PREFIX "")
   set(waypoint_follower_PREFIX ${waypoint_follower_DEVEL_PREFIX})
 else()
   set(waypoint_follower_SOURCE_PREFIX "")
   set(waypoint_follower_DEVEL_PREFIX "")
-  set(waypoint_follower_INSTALL_PREFIX /home/jmtc7/Learning/Autonomous-ROS-Car/ros/install)
+  set(waypoint_follower_INSTALL_PREFIX /home/jmtc7/code/ros/install)
   set(waypoint_follower_PREFIX ${waypoint_follower_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(waypoint_follower_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_follower/include " STREQUAL " ")
+if(NOT "/home/jmtc7/code/ros/src/waypoint_follower/include " STREQUAL " ")
   set(waypoint_follower_INCLUDE_DIRS "")
-  set(_include_dirs "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_follower/include")
+  set(_include_dirs "/home/jmtc7/code/ros/src/waypoint_follower/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_follower/includ
         message(FATAL_ERROR "Project 'waypoint_follower' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'waypoint_follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jmtc7/Learning/Autonomous-ROS-Car/ros/src/waypoint_follower/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'waypoint_follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jmtc7/code/ros/src/waypoint_follower/${idir}'.  ${_report}")
     endif()
     _list_append_unique(waypoint_follower_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib;/home/jmtc7/Learning/Autonomous-ROS-Car/ros/devel/lib;/home/jmtc7/Learning/self-driving-car-nanodegree/part2-localization-path-planning-control-and-system-integration/module09-carla/lesson19-writing-ros-nodes/catkin_ws/devel/lib;/home/jmtc7/akka/catkin_ws/devel/lib;/home/jmtc7/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/jmtc7/code/ros/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
