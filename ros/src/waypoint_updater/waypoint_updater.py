@@ -3,12 +3,11 @@
 import rospy
 from geometry_msgs.msg import PoseStamped
 from styx_msgs.msg import Lane, Waypoint
-import math
+from std_msgs.msg import Int32
 
-# Added dependencies
+import math
 import numpy as np
 from scipy.spatial import KDTree
-from std_msgs.msg import Int32
 
 '''
 This node will publish waypoints from the car's current position to some `x` distance ahead.
@@ -31,22 +30,20 @@ class WaypointUpdater(object):
     def __init__(self):
         rospy.init_node('waypoint_updater')
 
-        # Subscribe to the car's pose, and the base and the traffic lights waypoints
+        # DONE: Subscribe to the car's pose, and the base and the traffic lights waypoints
         rospy.Subscriber('/current_pose', PoseStamped, self.pose_cb)
         rospy.Subscriber('/base_waypoints', Lane, self.waypoints_cb)
         rospy.Subscriber('/traffic_waypoint', Int32, self.traffic_cb)
-        #rospy.Subscriber('/obstacle_waypoint', Int32, self.traffic_cb)
 
-
+        # DONE: Publisher of the waypoints to be followed
         self.final_waypoints_pub = rospy.Publisher('final_waypoints', Lane, queue_size=1)
 
-        # DONE: Add other member variables you need below
+        # DONE: Member variables
         self.pose = None
         self.base_waypoints = None
         self.waypoints_2d = None
         self.waypoints_tree = None
         self.stopline_wp_idx = -1 
-
 
         # Use the 'loop()' function instead of rospy.spin() to control publishing frequency
         self.loop()
@@ -160,15 +157,11 @@ class WaypointUpdater(object):
         # Make sure that the subscriber was initialized by checking if 'waypoints_2d' is created
         if not self.waypoints_2d:
             # Get the 2D coordinates of the base WPs and build a KDTree for quicker searches
-            self.waypoints_2d = [[waypoint.pose.pose.position.x, waypoint.pose.pose.position.x] for waypoint in waypoints.waypoints]
+            self.waypoints_2d = [[waypoint.pose.pose.position.x, waypoint.pose.pose.position.y] for waypoint in waypoints.waypoints]
             self.waypoints_tree = KDTree(self.waypoints_2d)
 
     def traffic_cb(self, msg):
         self.stopline_wp_idx = msg.data
-
-    def obstacle_cb(self, msg):
-        # TODO: Callback for /obstacle_waypoint message. We will implement it later
-        pass
 
 
     def get_waypoint_velocity(self, waypoint):
