@@ -8,6 +8,7 @@ import math
 # Added dependencies
 import numpy as np
 from scipy.spatial import KDTree
+from std_msgs.msg import Int32
 
 '''
 This node will publish waypoints from the car's current position to some `x` distance ahead.
@@ -44,7 +45,6 @@ class WaypointUpdater(object):
         self.base_waypoints = None
         self.waypoints_2d = None
         self.waypoints_tree = None
-        self.base_lane = None
         self.stopline_wp_idx = -1 
 
 
@@ -108,7 +108,7 @@ class WaypointUpdater(object):
         ## NOTE: Python will provide less than LOOKAHEAD_WPS points if it is required an index out of the list
         closest_idx = self.get_closest_waypoint_idx()
         farthest_idx = closest_idx + LOOKAHEAD_WPS
-        base_waypoints = self.base_lane.waypoints[closest_idx:farthest_idx]
+        base_waypoints = self.base_waypoints.waypoints[closest_idx:farthest_idx]
 
         # Modify subset of waypoints depending on the existance of stoplines
         ## If no stopline was succesfully analysed or its too far
