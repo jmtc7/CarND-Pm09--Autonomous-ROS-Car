@@ -58,7 +58,7 @@ class WaypointUpdater(object):
             if self.pose and self.base_waypoints:
                 # Get index of the closest waypooint and publish it
                 closest_waypoint_idx = self.get_closest_waypoint_idx()
-                self.publish_waypoints(closest_waypoint_idx)
+                self.publish_waypoints()
             
             # Sleep until it is time for the next iteration
             rate.sleep()
@@ -91,7 +91,7 @@ class WaypointUpdater(object):
 
 
     # DONE
-    def publish_waypoints(self, closest_idx):
+    def publish_waypoints(self):
         # Create subset of waypoints and publish
         lane = self.generate_lane()
         self.final_waypoints_pub.publish(lane)
@@ -105,14 +105,14 @@ class WaypointUpdater(object):
         ## NOTE: Python will provide less than LOOKAHEAD_WPS points if it is required an index out of the list
         closest_idx = self.get_closest_waypoint_idx()
         farthest_idx = closest_idx + LOOKAHEAD_WPS
-        base_waypoints = self.base_waypoints.waypoints[closest_idx:farthest_idx]
+        base_waypoints_subset = self.base_waypoints.waypoints[closest_idx:farthest_idx]
 
         # Modify subset of waypoints depending on the existance of stoplines
         ## If no stopline was succesfully analysed or its too far
         if self.stopline_wp_idx==-1 or (self.stopline_wp_idx>=farthest_idx):
-            lane.waypoints = base_waypoints
+            lane.waypoints = base_waypoints_subset
         else:
-            lane.waypoints = self.decelerate_waypoints(base_waypoints, closest_idx)
+            lane.waypoints = self.decelerate_waypoints(base_waypoints_subset, closest_idx)
 
         return lane
 
@@ -143,7 +143,7 @@ class WaypointUpdater(object):
             p.twist.twist.linear.x = min(vel, wp.twist.twist.linear.x)
             decelerated_waypoints.append(p)
 
-        return waypoints
+        return decelerated_waypoints
 
 
     # DONE: Callbacks for the subscribers
@@ -177,6 +177,7 @@ class WaypointUpdater(object):
             dist += dl(waypoints[wp1].pose.pose.position, waypoints[i].pose.pose.position)
             wp1 = i
         return dist
+
 
 
 if __name__ == '__main__':

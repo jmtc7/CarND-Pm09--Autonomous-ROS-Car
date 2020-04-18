@@ -54,11 +54,12 @@ class TLDetector(object):
         self.state_count = 0
 
         # DONE: Add more variables (useful to store waypoints )
-        self.waypoints_2d = None # Needed in class??
         self.waypoints_tree = None
 
         rospy.spin()
 
+
+    # Callbacks for the subscribers
     def pose_cb(self, msg):
         self.pose = msg
 
@@ -67,11 +68,11 @@ class TLDetector(object):
         # Get base WPs
         self.waypoints = waypoints
 
-        # Make sure that the subscriber was initialized by checking if 'waypoints_2d' is created
-        if not self.waypoints_2d:
+        # Make sure that the subscriber was initialized by checking if 'waypoints_tree' is created
+        if not self.waypoints_tree:
             # Get the 2D coordinates of the base WPs and build a KDTree for quicker searches
-            self.waypoints_2d = [[waypoint.pose.pose.position.x, waypoint.pose.pose.position.x] for waypoint in waypoints.waypoints]
-            self.waypoints_tree = KDTree(self.waypoints_2d)
+            waypoints_2d = [[waypoint.pose.pose.position.x, waypoint.pose.pose.position.y] for waypoint in waypoints.waypoints]
+            self.waypoints_tree = KDTree(waypoints_2d)
 
     def traffic_cb(self, msg):
         self.lights = msg.lights
@@ -111,6 +112,7 @@ class TLDetector(object):
 
         # TODO: improve logic (in the future) considering yellow lights
 
+
     # DONE
     def get_closest_waypoint(self, pose):
         """Identifies the closest path waypoint to the given position
@@ -124,6 +126,7 @@ class TLDetector(object):
         """
         # Use a KDTree to return the closest waypoint
         return self.waypoints_tree.query([pose[0], pose[1]], 1)[1]
+
 
     def get_light_state(self, light):
         """Determines the current color of the traffic light
@@ -147,6 +150,7 @@ class TLDetector(object):
         #Get classification
         return self.light_classifier.get_classification(cv_image)
         """
+
 
     def process_traffic_lights(self):
         """Finds closest visible traffic light, if one exists, and determines its
@@ -188,6 +192,8 @@ class TLDetector(object):
             return line_wp, state
         
         return -1, TrafficLight.UNKNOWN
+
+
 
 if __name__ == '__main__':
     try:
