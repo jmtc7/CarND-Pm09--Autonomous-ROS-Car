@@ -56,8 +56,7 @@ class WaypointUpdater(object):
         while not rospy.is_shutdown():
             # If the node is initialized
             if self.pose and self.base_waypoints:
-                # Get index of the closest waypooint and publish it
-                closest_waypoint_idx = self.get_closest_waypoint_idx()
+                # Publish next set waypoints to follow
                 self.publish_waypoints()
             
             # Sleep until it is time for the next iteration
@@ -136,8 +135,8 @@ class WaypointUpdater(object):
             ## NOTE: Maybe a linear decrease would be smoother (keep the derivatives in mind)
 
             ## Assume 0 velocity if it is too small
-            if vel < 1:
-                vel = 0
+            if vel < 1.0:
+                vel = 0.0
 
             ## Choose the biggest limitation as final velocity
             p.twist.twist.linear.x = min(vel, wp.twist.twist.linear.x)
