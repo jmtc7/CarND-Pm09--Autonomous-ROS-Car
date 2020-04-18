@@ -23,26 +23,29 @@ as well as to verify your TL classifier.
 '''
 
 LOOKAHEAD_WPS = 200 # Number of waypoints we will publish. You can change this number
+MAX_DECEL = 0.5 # Decelerate at 5
 
 
 class WaypointUpdater(object):
     def __init__(self):
         rospy.init_node('waypoint_updater')
 
-        # Subscribe to the car's pose and the base waypoints
+        # Subscribe to the car's pose, and the base and the traffic lights waypoints
         rospy.Subscriber('/current_pose', PoseStamped, self.pose_cb)
         rospy.Subscriber('/base_waypoints', Lane, self.waypoints_cb)
-
-        # TODO: Add a subscriber for /traffic_waypoint and /obstacle_waypoint below
+        rospy.Subscriber('/traffic_waypoint', Int32, self.traffic_cb)
+        #rospy.Subscriber('/obstacle_waypoint', Int32, self.traffic_cb)
 
 
         self.final_waypoints_pub = rospy.Publisher('final_waypoints', Lane, queue_size=1)
 
-        # TODO: Add other member variables you need below
+        # DONE: Add other member variables you need below
         self.pose = None
         self.base_waypoints = None
         self.waypoints_2d = None
         self.waypoints_tree = None
+        self.base_lane = None
+        self.stopline_wp_idx = -1 
 
 
         # Use the 'loop()' function instead of rospy.spin() to control publishing frequency
@@ -89,23 +92,67 @@ class WaypointUpdater(object):
 
         return closest_idx
 
+
     # DONE
     def publish_waypoints(self, closest_idx):
+        # Create subset of waypoints and publish
+        lane = self.generate_lane()
+        self.final_waypoints_pub.publish(lane)
+
+
+    # DONE
+    def generate_lane(self):
         lane = Lane()
 
         # Use the LOOKAHEAD_WPS WPs to create the lane message
         ## NOTE: Python will provide less than LOOKAHEAD_WPS points if it is required an index out of the list
-        lane.header = self.base_waypoints.header
-        lane.waypoints = self.base_waypoints.waypoints[closest_idx:(LOOKAHEAD_WPS+closest_idx)]
+        closest_idx = self.get_closest_waypoint_idx()
+        farthest_idx = closest_idx + LOOKAHEAD_WPS
+        base_waypoints = self.base_lane.waypoints[closest_idx:farthest_idx]
 
-        # Publish
-        self.final_waypoints_pub.publish(lane)
+        # Modify subset of waypoints depending on the existance of stoplines
+        ## If no stopline was succesfully analysed or its too far
+        if self.stopline_wp_idx==-1 or (self.stopline_wp_idx>=farthest_idx):
+            lane.waypoints = base_waypoints
+        else:
+            lane.waypoints = self.decelerate_waypoints(base_waypoints, closest_idx)
+
+        return lane
+
 
     # DONE
+    def decelerate_waypoints(self, waypoints, closest_idx):
+        decelerated_waypoints = []
+
+        # For each waypoint
+        for i, wp in enumerate(waypoints):
+            # Make a copy to avoid modifying "base_waypoints"
+            ## Because it is only published once
+            ## Pose (position and orientation) will not change
+            p = Waypoint()
+            p.pose = wp.pose
+
+            # Compute velocity for the waypoint
+            stop_idx = max(self.stopline_wp_idx - closest_idx - 2, 0) # -2 because, otherwise, the center of the car will be over the stop line
+            dist = self.distance(waypoints, i, stop_idx) # Distance between current waypoint and the one in which the car needs to stop
+            vel = math.sqrt(2*MAX_DECEL*dist) # The smaller the distance, the smaller the velocity (and the bigger the deceleration)
+            ## NOTE: Maybe a linear decrease would be smoother (keep the derivatives in mind)
+
+            ## Assume 0 velocity if it is too small
+            if vel < 1:
+                vel = 0
+
+            ## Choose the biggest limitation as final velocity
+            p.twist.twist.linear.x = min(vel, wp.twist.twist.linear.x)
+            decelerated_waypoints.append(p)
+
+        return waypoints
+
+
+    # DONE: Callbacks for the subscribers
     def pose_cb(self, msg):
         self.pose = msg
 
-    # DONE
     def waypoints_cb(self, waypoints):
         # Get base WPs
         self.base_waypoints = waypoints
@@ -116,14 +163,13 @@ class WaypointUpdater(object):
             self.waypoints_2d = [[waypoint.pose.pose.position.x, waypoint.pose.pose.position.x] for waypoint in waypoints.waypoints]
             self.waypoints_tree = KDTree(self.waypoints_2d)
 
-
     def traffic_cb(self, msg):
-        # TODO: Callback for /traffic_waypoint message. Implement
-        pass
+        self.stopline_wp_idx = msg.data
 
     def obstacle_cb(self, msg):
         # TODO: Callback for /obstacle_waypoint message. We will implement it later
         pass
+
 
     def get_waypoint_velocity(self, waypoint):
         return waypoint.twist.twist.linear.x
